@@ -21,7 +21,7 @@ style: |
 
 ---
 
-# Dedective Dylan
+# Detective Dylan
 <div class="container">
 <div class="col">
 <ul>
@@ -30,7 +30,7 @@ style: |
 </ul>
 </div>
 <div class="col">
-<img src="img/dedective.jpg" alt="Detective" height="500px">
+<img src="img/detective.jpg" alt="Detective" height="500px">
 </div>
 
 ---
