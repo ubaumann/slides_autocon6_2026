@@ -958,17 +958,17 @@ with manager.connect(host=host, username=username, password=password,
 <div class="container">
 <div class="col">
 
-- scrapli_netconf
-- synchronous and asynchronous
-- RFC6241
-- https://scrapli.github.io/scrapli_netconf/
+- Zig library
+- Synchronous and asynchronous
+- Python and Go
+- https://carlmontanari.github.io/scrapli/
 
 </div>
 <div class="col">
 
 <div style="text-align:center;">
   <p><strong>scrapli</strong></p>
-  <p><em>Python library for network automation</em></p>
+  <p><em>scrapli -- scrap(e c)li -- is a set of libraries created to interact with devices via the CLI, and NETCONF.</em></p>
 </div>
 
 </div>
@@ -979,12 +979,13 @@ with manager.connect(host=host, username=username, password=password,
 ## scrapli — get config
 
 ```python
-from scrapli_netconf.driver import NetconfDriver
+from scrapli import AuthOptions, Netconf
+from scrapli.netconf import DatastoreType
 
-with NetconfDriver(host=host, auth_username=username,
-                   auth_password=password, auth_strict_key=auth_strict_key) as conn:
+with Netconf(host=host,
+             auth_options=AuthOptions(username=user, password=pw)) as conn:
 
-    result = conn.get_config(source="running")
+    result = conn.get_config(source=DatastoreType.RUNNING)
     print(result.result)
 ```
 
@@ -993,10 +994,11 @@ with NetconfDriver(host=host, auth_username=username,
 ## scrapli — edit config
 
 ```python
-from scrapli_netconf.driver import NetconfDriver
+from scrapli import AuthOptions, Netconf
+from scrapli.netconf import DatastoreType
 
-with NetconfDriver(host=host, auth_username=username,
-                   auth_password=password, auth_strict_key=auth_strict_key) as conn:
+with Netconf(host=host,
+             auth_options=AuthOptions(username=user, password=pw)) as conn:
 
     set_exec_banner = """<config>
       <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
@@ -1006,9 +1008,9 @@ with NetconfDriver(host=host, auth_username=username,
       </native>
     </config>"""
 
-    conn.lock(target="running")
-    result = conn.edit_config(config=set_exec_banner, target="running")
-    conn.unlock(target="running")
+    conn.lock(target=DatastoreType.CANDIDATE)
+    result = conn.edit_config(config=set_exec_banner, target=DatastoreType.CANDIDATE)
+    conn.unlock(target=DatastoreType.CANDIDATE)
     print(result)
 ```
 
