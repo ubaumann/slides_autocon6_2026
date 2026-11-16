@@ -1,0 +1,7 @@
+[project]
+name = "demo-02-yang-netconf"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "scrapli>=2026.11.12",
+]

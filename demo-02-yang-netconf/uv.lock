@@ -1,0 +1,27 @@
+version = 1
+revision = 5
+requires-python = ">=3.12"
+
+[[package]]
+name = "demo-02-yang-netconf"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "scrapli" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "scrapli", specifier = ">=2026.11.12" }]
+
+[[package]]
+name = "scrapli"
+version = "2026.11.12"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/37/a0/73926fc952f7da92536afacba529b13da869d20db08e401d440cb4fa2265/scrapli-2026.11.12.tar.gz", hash = "sha256:f79f4241b56800ad4ad7642f7b8b7502915b83be71774a43e681ee70a908bcd4", size = 4546613, upload-time = "2026-11-12T18:03:25.29Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ae/03/7313883ab08fd9b3ff00a785bb3a05d8fdfcb28423ebd76b037cb297eaea/scrapli-2026.11.12-py3-none-macosx_11_0_arm64.whl", hash = "sha256:18ec801b221faec78faafd726fe866101631b84cd73adfd5dd63372270d2ce5e", size = 2321665, upload-time = "2026-11-12T18:03:16.064Z" },
+    { url = "https://files.pythonhosted.org/packages/b3/6f/cc85d3f400cfce8c431732c11b7dcdbf0a6a95f7c979811f42035b5bfccb/scrapli-2026.11.12-py3-none-manylinux2010_x86_64.whl", hash = "sha256:1737debc6a2e77b9b245e97a9d9a5a5537d7a15221351212f22b2f4b59d3228c", size = 6825423, upload-time = "2026-11-12T18:03:17.576Z" },
+    { url = "https://files.pythonhosted.org/packages/d8/bb/79fa0681e9b06abe0f6a0b6c11b6ef5f05acb072a54088035d61013ebc21/scrapli-2026.11.12-py3-none-manylinux2014_aarch64.whl", hash = "sha256:fd2e6d9aa08c2a2753e0b016fef7603642b27a4a2cbeff97fb8666499922892c", size = 15647910, upload-time = "2026-11-12T18:03:19.094Z" },
+    { url = "https://files.pythonhosted.org/packages/ff/1b/41eb7ff684c7c351f45b68142add8a9ea0a1aae688e7b9800994392f006d/scrapli-2026.11.12-py3-none-musllinux_1_1_aarch64.whl", hash = "sha256:be0095bf3b68b1a6116003c7b5a6855c3ec4ab1b32c5eebdee4a45f426140c39", size = 19968341, upload-time = "2026-11-12T18:03:21.278Z" },
+    { url = "https://files.pythonhosted.org/packages/a9/e9/192714652e7e072ea23f9362092b9ad66ce43212107bea4dbaac72744285/scrapli-2026.11.12-py3-none-musllinux_1_1_x86_64.whl", hash = "sha256:cb11e85d44645fae9c5492b656164f39b14918b35d68b8a6c2c598565c77e494", size = 11343163, upload-time = "2026-11-12T18:03:23.377Z" },
+]
