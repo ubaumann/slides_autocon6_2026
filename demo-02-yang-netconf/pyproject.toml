@@ -5,3 +5,8 @@ requires-python = ">=3.12"
 dependencies = [
     "scrapli>=2026.11.12",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.5",
+]

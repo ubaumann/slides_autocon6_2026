@@ -1,0 +1,36 @@
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="101">
+    <data>
+        <System xmlns="http://cisco.com/ns/yang/cisco-nx-os-device">
+            <span-items>
+                <monitor-items>
+                    <Monitor-list>
+                        <id>10</id>
+                        <allowSharing>false</allowSharing>
+                        <configState>down</configState>
+                        <description>demo_ac6</description>
+                        <destinationIp>10.100.0.10</destinationIp>
+                        <erspanId>10</erspanId>
+                        <fwdDropsDirection>none</fwdDropsDirection>
+                        <ipDscp>0</ipDscp>
+                        <ipTtl>255</ipTtl>
+                        <isFwdDropsRx>false</isFwdDropsRx>
+                        <isFwdDropsRxLowPriority>false</isFwdDropsRxLowPriority>
+                        <isMarkerMilliSeconds>false</isMarkerMilliSeconds>
+                        <isMarkerPacket>false</isMarkerPacket>
+                        <markerPktInt>100</markerPktInt>
+                        <mtu>10240</mtu>
+                        <srcintf-items>
+                            <SourceIntf-list>
+                                <id>spo512</id>
+                                <allowPfc>false</allowPfc>
+                                <direction>both</direction>
+                            </SourceIntf-list>
+                        </srcintf-items>
+                        <type>erspan-source</type>
+                        <vrfName>default</vrfName>
+                    </Monitor-list>
+                </monitor-items>
+            </span-items>
+        </System>
+    </data>
+</rpc-reply>
