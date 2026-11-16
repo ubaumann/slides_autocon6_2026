@@ -1,0 +1,7 @@
+.venv
+.ruff_cache
+__pycache__
+
+
+demo-01-openapi-sdk/backend_generated/app
+demo-01-openapi-sdk/sdk_generated/src

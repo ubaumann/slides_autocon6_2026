@@ -1,0 +1,25 @@
+[project]
+name = "backend-generated"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.162.7",
+]
+
+[dependency-groups]
+dev = [
+    "datamodel-code-generator>=0.96.0",
+]
+
+
+[tool.datamodel-codegen]
+input = "../backend/openapi.json"
+input-file-type = "openapi"
+openapi-scopes = ["schemas", "api"]
+output-model-type = "pydantic_v2.BaseModel"
+preset = "standard-py312-20261112"
+output = "app/models.py"
+generate-server = "fastapi"
+server-output = "app/server"
+server-package = "app.server"
+server-model-package = "app.models"
