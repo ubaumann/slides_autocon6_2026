@@ -11,7 +11,7 @@ uvx pyang -f tree Cisco-NX-OS-device.yang --tree-path="/System/span-items"
 
 generating the model
 ```
-uv run pydantify -t "Cisco-NX-OS-device/System/span-items" Cisco-NX-OS-device.yang -o ~/iac_oss/slides_autocon6_2026/demo-02-yang-netconf/model
+uvx pydantify -t "Cisco-NX-OS-device/System/span-items" Cisco-NX-OS-device.yang -o ~/iac_oss/slides_autocon6_2026/demo-02-yang-netconf/model
 ```
 
 
