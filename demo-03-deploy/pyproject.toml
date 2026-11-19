@@ -1,0 +1,17 @@
+[project]
+name = "demo-03-deploy"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "nornir-rich>=0.3.1",
+    "nornir-scrapli",
+    "pydantify-common>=0.2.0",
+]
+
+[tool.uv.sources]
+nornir-scrapli = { git = "https://github.com/scrapli/nornir_scrapli.git", branch = "dga/feat-v2-async-m8ppp" }
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.5",
+]
