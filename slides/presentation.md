@@ -48,7 +48,7 @@ monitor session 10 type erspan-source
 
 ---
 
-# Triggerd by Events
+# Triggered by Events
 
 ```jinja
 {% for session in erspan_sessions %}
